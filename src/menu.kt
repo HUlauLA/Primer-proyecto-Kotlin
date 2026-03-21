@@ -25,12 +25,12 @@ fun main() {
 
         when (opcion) {
 
-            1 -> mostrarInventario(inventario)
-            2 -> agregarProductoAlCarrito(carrito, inventario)
-            3 -> mostrarCarrito(carrito)
-            4 -> eliminarProductoDelCarrito(carrito)
-            5 -> realizarCompra(carrito)
-            6 -> println("Saliendo del sistema...")
+    1 -> mostrarInventario(inventario)
+    2 -> agregarProducto(carrito, inventario)
+    3 -> mostrarCarrito(carrito)
+    4 -> eliminarProducto(carrito)
+    5 -> comprar(carrito)
+    6 -> println("Saliendo del sistema...")
 
             else -> println("Opción inválida")
         }
