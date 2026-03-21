@@ -70,6 +70,6 @@ fun comprar(carrito: MutableList<ItemCarrito>) {
 
     mostrarCarrito(carrito)
 
-    println("Compra realizada con éxito 🎉")
+    println("Compra realizada con éxito ")
     carrito.clear()
 }
