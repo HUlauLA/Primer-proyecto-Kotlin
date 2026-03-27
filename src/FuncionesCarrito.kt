@@ -75,7 +75,7 @@ fun comprar(carrito: MutableList<ItemCarrito>) {
 }
 
 fun mostrarCarrito(carrito: List<ItemCarrito>) {
-    
+    //actualizado
     if (carrito.isEmpty()) {
         println("⚠ El carrito está vacío.")
         return
