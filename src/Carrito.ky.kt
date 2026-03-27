@@ -5,7 +5,7 @@ class Carrito {
     // AGREGAR PRODUCTO
     fun agregarProducto(producto: Producto, cantidad: Int) {
 
-        if (producto.stock == 0) {
+        if (producto.cantidadDisponible == 0) {
             println("El producto '${producto.nombre}' está agotado.")
             return
         }
@@ -15,16 +15,16 @@ class Carrito {
             return
         }
 
-        if (cantidad > producto.stock) {
-            println("La cantidad solicitada supera el stock disponible (${producto.stock}).")
+        if (cantidad > producto.cantidadDisponible) {
+            println("La cantidad solicitada supera el stock disponible (${producto.cantidadDisponible}).")
             return
         }
 
-        val itemExistente = items.find { it.producto.id == producto.id }
+        val itemExistente = items.find { it.producto.nombre == producto.nombre }
 
         if (itemExistente != null) {
 
-            if (itemExistente.cantidad + cantidad > producto.stock) {
+            if (itemExistente.cantidad + cantidad > producto.cantidadDisponible) {
                 println("No puedes agregar más. Supera el stock disponible.")
                 return
             }
@@ -39,9 +39,9 @@ class Carrito {
     }
 
     // ELIMINAR PRODUCTO
-    fun eliminarProducto(idProducto: Int, cantidad: Int) {
+    fun eliminarProducto(nombreProducto: String, cantidad: Int) {
 
-        val itemExistente = items.find { it.producto.id == idProducto }
+        val itemExistente = items.find { it.producto.nombre == nombreProducto }
 
         if (itemExistente == null) {
             println("Ese producto no está en el carrito.")

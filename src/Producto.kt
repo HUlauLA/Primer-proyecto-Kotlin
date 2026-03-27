@@ -1,4 +1,6 @@
 import java.util.Scanner
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 //Clase Producto
 data class Producto(
