@@ -8,7 +8,6 @@ data class Producto(
     val precio: Double,
     var cantidadDisponible: Int
 )
-
 // mostrar productos
 fun mostrarInventario(productos: List<Producto>) {
     println("\n=== INVENTARIO DISPONIBLE ===")
@@ -19,7 +18,6 @@ fun mostrarInventario(productos: List<Producto>) {
         println("-----------------------------")
     }
 }
-
 // fun main() {
   //  val scanner = Scanner(System.`in`)
    // val inventario = mutableListOf<Producto>()
