@@ -6,15 +6,14 @@ import java.time.format.DateTimeFormatter
 data class Producto(
     val nombre: String,
     val precio: Double,
-    var cantidadDisponible: Int
+    var stock: Int
 )
-// mostrar productos
 fun mostrarInventario(productos: List<Producto>) {
     println("\n=== INVENTARIO DISPONIBLE ===")
     for (producto in productos) {
         println("Nombre: ${producto.nombre}")
         println("Precio: $${producto.precio}")
-        println("Stock disponible: ${producto.cantidadDisponible}")
+        println("Stock disponible: ${producto.stock}")
         println("-----------------------------")
     }
 }
