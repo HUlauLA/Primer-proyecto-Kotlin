@@ -34,7 +34,7 @@ class CarritoCompra  {
             items.remove(item)
             println("${item.producto.nombre} eliminado del carrito.")
         } else {
-            println("El producto no se encuentra en el carrito.")
+            println("El producto no se encuentra en el carrito")
         }
     }
 
